@@ -1,0 +1,25 @@
+[project]
+name = "trombint"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Flotealy", email = "flotealy@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4",
+    "cas-connector",
+    "python-dotenv",
+    "requests",
+]
+
+[project.scripts]
+trombint = "trombint.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.25,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+cas-connector = { git = "https://github.com/INT-Scripts/Cas_Connector" }
